@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "HTLM Element Locator",
+  "version": "1.0",
+  "description": "A simple utility to get the html elements unique identifier",
+  "devtools_page": "devtools.html",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
